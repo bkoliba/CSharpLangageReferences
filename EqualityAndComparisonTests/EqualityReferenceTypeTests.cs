@@ -1,11 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using Xunit;
 
 namespace EqualityTests
 {
-    public class ReferenceTypeEqualityTests
+    [Trait("Reference Type Equality","")]
+    public class EqualityReferenceTypeTests
     {
         //When wanting to implement equality for a reference type, you would want to perform the following.
         //-	Override object.Equals() (Equality logic should go here because it is virtual)
