@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.26730.8
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EqualityAndComparisonTests", "EqualityAndComparisonTests\EqualityAndComparisonTests.csproj", "{A7E13A57-3A3C-406C-8EFD-EE6746AF7232}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormattingTypesTests", "FormattingTypesTests\FormattingTypesTests.csproj", "{937F107D-E6F1-4F23-9E03-C575DB8FB49F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{A7E13A57-3A3C-406C-8EFD-EE6746AF7232}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A7E13A57-3A3C-406C-8EFD-EE6746AF7232}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A7E13A57-3A3C-406C-8EFD-EE6746AF7232}.Release|Any CPU.Build.0 = Release|Any CPU
+		{937F107D-E6F1-4F23-9E03-C575DB8FB49F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{937F107D-E6F1-4F23-9E03-C575DB8FB49F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{937F107D-E6F1-4F23-9E03-C575DB8FB49F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{937F107D-E6F1-4F23-9E03-C575DB8FB49F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
