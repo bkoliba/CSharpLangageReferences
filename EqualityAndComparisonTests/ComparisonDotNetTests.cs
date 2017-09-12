@@ -3,7 +3,7 @@ using Xunit;
 
 namespace EqualityAndComparisonTests
 {
-    //Int, Floats,... Implements both IComparable<T> and the operators
+    //Int, Floats, and other primative types implements both IComparable<T> and the operators
     //String only Implements IComparable<T> not the operators (alphbetical ordering)
     [Trait(".NET Comparison Defaults","")]
     public class ComparisonDotNetTests
@@ -13,17 +13,17 @@ namespace EqualityAndComparisonTests
         // 1 - when value is greater than
         // -1 - when value is less than
         [Fact]
-        void WhenComparingAgainstGreaterValue_ShouldBeNegativeOne()
+        void WhenComparingIntAgainstGreaterValueInt_ShouldBeNegativeValue()
         {
             int value1 = 1;
             int value2 = 2;
 
-            Assert.True(-1 == value1.CompareTo(value2));
+            Assert.True(value1.CompareTo(value2) < 0);
             Assert.True(value1 < value2);
         }
 
         [Fact]
-        void WhenComparingAgainstLesserValue_ShouldBeOne()
+        void WhenComparingIntAgainstLowerValueInt_ShouldBePositive()
         {
             int value1 = 1;
             int value2 = 2;
@@ -33,7 +33,7 @@ namespace EqualityAndComparisonTests
         }
 
         [Fact]
-        void WhenComparingAgainstSameValue_ShouldBeZero()
+        void WhenComparingAgainstSameValueInt_ShouldBeZero()
         {
             int value1 = 2;
             int value2 = 2;
@@ -52,16 +52,16 @@ namespace EqualityAndComparisonTests
             string apple = "Apple";
             string grape = "Grape";
 
-            Assert.True(-1 == apple.CompareTo(grape));
+            Assert.True(apple.CompareTo(grape) < 0);
         }
 
         [Fact]
-        void WhenComparingAgainstHigherAlphaString_ShouldBeOne()
+        void WhenComparingAgainstHigherAlphaString_ShouldBePositive()
         {
             string apple = "Apple";
             string grape = "Grape";
 
-            Assert.True(1 == grape.CompareTo(apple));
+            Assert.True(grape.CompareTo(apple) > 0);
         }
 
         [Fact]
@@ -69,7 +69,7 @@ namespace EqualityAndComparisonTests
         {
             string apple = "Apple";
 
-            Assert.True(0 == apple.CompareTo(apple));
+            Assert.True(apple.CompareTo(apple) == 0);
         }
 
         //Generally you would avoid implementing IComparable<T> unless there is really only one way to sort the Type.
@@ -109,22 +109,22 @@ namespace EqualityAndComparisonTests
         }
 
         [Fact]
-        void WhenComparingCurrentAgeWithGreaterAge_ShouldBeNegativeOne()
+        void WhenComparingCurrentAgeWithGreaterAge_ShouldBeNegative()
         {
             var value1 = new CurrentAge(1);
             var value2 = new CurrentAge(2);
 
-            Assert.True(-1 == value1.CompareTo(value2));
+            Assert.True(value1.CompareTo(value2) < 0);
             Assert.True(value1 < value2);
         }
 
         [Fact]
-        void WhenComparingCurrentAgeWithLesserAge_ShouldBeOne()
+        void WhenComparingCurrentAgeWithLesserAge_ShouldBePositive()
         {
             var value1 = new CurrentAge(1);
             var value2 = new CurrentAge(2);
 
-            Assert.True(1 == value2.CompareTo(value1));
+            Assert.True(value2.CompareTo(value1) > 0);
             Assert.True(value2 > value1);
         }
 
@@ -134,7 +134,7 @@ namespace EqualityAndComparisonTests
             var value1 = new CurrentAge(1);
             var value2 = value1;
 
-            Assert.True(0 == value1.CompareTo(value2));
+            Assert.True(value1.CompareTo(value2) == 0);
         }
     }
 }
