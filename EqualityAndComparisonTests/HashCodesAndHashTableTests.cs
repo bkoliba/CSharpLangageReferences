@@ -4,6 +4,7 @@ using Xunit;
 
 namespace EqualityAndComparisonTests
 {
+    [Trait("Hash tables and Hash Codes", "")]
     public class HashCodesAndHashTableTests
     {
         /// <summary>
@@ -55,7 +56,7 @@ namespace EqualityAndComparisonTests
                 return comparer.Equals(x.FirstName, y.FirstName) ? comparer.Equals(x.LastName, y.LastName) : false;
             }
 
-            //Using string comparer to XOR '^' the hash codes together. This usually gets a pretty even spread across the collections hask table bucket
+            //Using string comparer to XOR '^' the hash codes together. This usually gets a pretty even spread across the collections hash table buckets.
             //Make sure to use same fields in GetHashCode as you did in Equals
             public override int GetHashCode(PersonStruct person)
             {
