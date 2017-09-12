@@ -4,12 +4,13 @@ using Xunit;
 
 namespace EqualityAndComparisonTests
 {
+    [Trait("Hash tables and Hash Codes", "")]
     public class HashCodesAndHashTableTests
     {
         /// <summary>
         /// Hash tables are used by a couple of collections such as HashSet and Dictionaries. The HashTable uses the hash code
-        /// of the value % 5 and takes the remainder to determine what bucket the item would be stored into. This allows for great
-        /// preformance when the HashCode algorithm divides up evenly accross the buckets. When implementing equality be sure to
+        /// of the value % 5 and takes the remainder to determine what bucket the item would be stored into the collection. This allows for great
+        /// preformance when the HashCode algorithm divides the items up evenly accross the buckets. When implementing equality be sure to
         /// also implement GetHashCode using the same fields that were used in implementing equality.
         /// </summary>
 
@@ -55,7 +56,7 @@ namespace EqualityAndComparisonTests
                 return comparer.Equals(x.FirstName, y.FirstName) ? comparer.Equals(x.LastName, y.LastName) : false;
             }
 
-            //Using string comparer to XOR '^' the hash codes together. This usually gets a pretty even spread across the collections hask table bucket
+            //Using string comparer to XOR '^' the hash codes together. This usually gets a pretty even spread across the collections hash table buckets.
             //Make sure to use same fields in GetHashCode as you did in Equals
             public override int GetHashCode(PersonStruct person)
             {
