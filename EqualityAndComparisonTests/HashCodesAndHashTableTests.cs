@@ -9,8 +9,8 @@ namespace EqualityAndComparisonTests
     {
         /// <summary>
         /// Hash tables are used by a couple of collections such as HashSet and Dictionaries. The HashTable uses the hash code
-        /// of the value % 5 and takes the remainder to determine what bucket the item would be stored into. This allows for great
-        /// preformance when the HashCode algorithm divides up evenly accross the buckets. When implementing equality be sure to
+        /// of the value % 5 and takes the remainder to determine what bucket the item would be stored into the collection. This allows for great
+        /// preformance when the HashCode algorithm divides the items up evenly accross the buckets. When implementing equality be sure to
         /// also implement GetHashCode using the same fields that were used in implementing equality.
         /// </summary>
 
