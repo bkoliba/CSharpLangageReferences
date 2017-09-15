@@ -8,35 +8,38 @@ namespace CollectionUsageTests
     [Trait("Array Usage", "")]
     public class ArrayTests
     {
-        //Array are an Index-based list with an Rich API, very lightweight, special C# syntax, and are fixed size.
+        //Array are an Index-based collection with an Rich API, very lightweight, special C# syntax, and are fixed size.
         //-Elements are stored sequentially in memory (very efficient)
-        //-Array and other collectitions are reference types
+        //-Array and other collectitions are all reference types
         private ITestOutputHelper _output;
         public ArrayTests(ITestOutputHelper output)
         {
+            //used to write to the test explorer output
             _output = output;
         }
 
         [Fact]
         public void CreatingArrays()
         {
-            //empty array
+            //creating empty arrays
             var ary = new int[0];
             var ary1 = new int[] { };
-            Assert.Equal(ary, ary1);
-            Assert.Equal(0, ary1.Length);
+            int[] ary2 = { };
+
             Assert.Empty(ary);
+            Assert.Empty(ary1);
+            Assert.Empty(ary2);
 
             //arrays by default implicitly initialized the types in the array
             ary = new int[5];
             Assert.Equal(5, ary.Length);
             Assert.Equal(new[] { 0, 0, 0, 0, 0 }, ary);
 
-            //initializing arrays
+            //initializing arrays with values
             ary = new int[5] { 1, 2, 3, 4, 5 };
             ary1 = new[] { 1, 2, 3, 4, 5 }; //notice type and size isn't necessary
-            var ary2 = new[] { 1, 1 + 1, 1 + 2, 2 * 2, 5 };
-            int[] ary3 = { 1, 2, 3, 4, 5 };
+            ary2 = new[] { 1, 1 + 1, 1 + 2, 2 * 2, 5 }; //expression and methods are allowed
+            int[] ary3 = { 1, 2, 3, 4, 5 }; //'new' keyword not needed if explicitly given the type
 
             Assert.True(ary != ary1);//because Arrays are reference types
             Assert.Equal(ary, ary1);
@@ -75,7 +78,7 @@ namespace CollectionUsageTests
 
             for (int i = 0; i < ary.Length; i++)
             {
-                ary[i] = i + 1;
+                ary[i] = i + 1; //replace value stored at the memory location
             }
             Assert.Equal(new[] { 1, 2, 3 }, ary);
         }
@@ -83,6 +86,7 @@ namespace CollectionUsageTests
         [Fact]
         public void CopyingArrays()
         {
+            //used to copy all the values to another array index: Be sure there is enough room allocated in the destination
             int[] ary = { 1, 2, 3, 4 };
             var ary1 = new int[ary.Length];
             ary.CopyTo(ary1, 0);
@@ -101,7 +105,7 @@ namespace CollectionUsageTests
             Assert.Equal(expectedAry, ary);
 
             var ary1 = new[] { 1, 2, 3 };
-            Assert.Equal(expectedAry, ary1.Reverse()); //LINQ extension method returns new reverse IEnumerable
+            Assert.Equal(expectedAry, ary1.Reverse()); //LINQ extension method returns new reverse IEnumerable of elements
         }
 
         [Fact]
@@ -132,9 +136,10 @@ namespace CollectionUsageTests
         [Fact]
         public void BinarySearchInArrays()
         {
-            //For binary search to work the collection must be sorted first and should be used on large collections
-            //It works by cutting the sorted collection in half and see if that value is higher or lower and stops searching the
-            //half it no longer cares about. Than it cuts the remaining collection in half and repeats the process until element is found
+            //For binary search to work the collection must be sorted first and should be used on large collections.
+            //It works by using the sorted collection midway point and see if that value is higher or lower.
+            //This would cut the collection in half, than the steps are repeated until the element is found. 
+            //Is very effective because the collection is cut in half on each comparison until the element is found.
             var sortedAry = new[] { 1, 2, 3, 4, 5 };
 
             Assert.Equal(1, Array.BinarySearch(sortedAry, 2));//get the first element found index
