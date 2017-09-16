@@ -5,7 +5,7 @@ using Xunit.Abstractions;
 
 namespace CollectionUsageTests
 {
-    [Trait("Array Usage", "")]
+    [Trait("Collection Usage", "Arrays")]
     public class ArrayTests
     {
         //Array are an Index-based collection with an Rich API, very lightweight, special C# syntax, and are fixed size.
