@@ -4,7 +4,7 @@ using Xunit.Abstractions;
 
 namespace EqualityAndComparisonTests
 {
-    [Trait("String Comparison","")]
+    [Trait("Comparison", "String Comparison")]
     public class ComparisonStringTests
     {
         [Fact]

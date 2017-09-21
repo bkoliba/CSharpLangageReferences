@@ -4,7 +4,7 @@ using Xunit;
 //References:https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-numeric-format-strings
 namespace FormattingTypesTests
 {
-    [Trait("Numeric String Formatting","")]
+    [Trait("String Formatting","Numeric")]
     public class NumericFormatStringTests
     {
         [Fact]

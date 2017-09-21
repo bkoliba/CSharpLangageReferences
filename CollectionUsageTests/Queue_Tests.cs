@@ -6,11 +6,12 @@ using Xunit;
 namespace CollectionUsageTests
 {
     [Trait("Collection Usage", "Queue<T>")]
-    public class QueueCollectionTests
+    public class Queue_Tests
     {
         /// <summary>
         /// Queue<T> is an non-indexed collection which allows values to be added (enqueue) and removed (dequeue) in the order they were added 
         /// First-in First-out collection
+        /// Namespace:System.Collections.Generic
         /// </summary>
 
         [Fact]

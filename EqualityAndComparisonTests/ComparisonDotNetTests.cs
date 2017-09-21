@@ -5,7 +5,7 @@ namespace EqualityAndComparisonTests
 {
     //Int, Floats, and other primative types implements both IComparable<T> and the operators
     //String only Implements IComparable<T> not the operators (alphbetical ordering)
-    [Trait(".NET Comparison Defaults","")]
+    [Trait("Comparison", ".NET Comparison Defaults")]
     public class ComparisonDotNetTests
     {
         //Int32 Implements IComparable<T> and returns

@@ -4,11 +4,12 @@ using Xunit;
 namespace CollectionUsageTests
 {
     [Trait("Collection Usage", "Stack<T>")]
-    public class StackCollectionTests
+    public class Stack_Tests
     {
         /// <summary>
         /// Stack<T> allows a collection to be created by adding items (push) and removing items (pop) from the same spot.
         /// Last-in First-out collection
+        /// Namespace: System.Collection.Generic
         /// </summary>
 
         [Fact]

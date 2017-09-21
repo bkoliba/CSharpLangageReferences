@@ -3,7 +3,7 @@ using Xunit;
 
 namespace EqualityTests
 {
-    [Trait("Reference Type Equality","")]
+    [Trait("Equality", "Reference Type Equality")]
     public class EqualityReferenceTypeTests
     {
         //When wanting to implement equality for a reference type, you would want to perform the following.

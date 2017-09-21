@@ -7,7 +7,7 @@ using Xunit.Abstractions;
 namespace CollectionUsageTests
 {
     [Trait("Collection Usage", "List<T>")]
-    public class ListCollectionTests
+    public class List_Tests
     {
         private ITestOutputHelper _output;
 
@@ -28,9 +28,9 @@ namespace CollectionUsageTests
         /// IEnumerable<T> allow you enumerate through the collection by implementing: IEnumerator<T> GetEnumerator()
         /// 
         /// IEnumerable: IEnumerator GetEnumerator(); Returns an enumerator that iterates through a collection.
-        ///     IEnumerator:  object Current, bool MoveNext(), void Reset();
+        ///     IEnumerator:  object Current, bool MoveNext(), void Reset();     
         /// </summary>
-        public ListCollectionTests(ITestOutputHelper output)
+        public List_Tests(ITestOutputHelper output)
         {
             _output = output;
         }

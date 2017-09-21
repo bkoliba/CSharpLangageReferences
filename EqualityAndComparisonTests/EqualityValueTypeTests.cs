@@ -3,7 +3,7 @@ using Xunit;
 
 namespace EqualityTests
 {
-    [Trait("Value Type Equality","")]
+    [Trait("Equality","Value Type Equality")]
     public class EqualityValueTypeTests
     {
         //When overriding and implementing equality for a value type do the following:

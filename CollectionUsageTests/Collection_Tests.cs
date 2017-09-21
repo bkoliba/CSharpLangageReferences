@@ -5,12 +5,12 @@ using System.Collections.ObjectModel;
 namespace CollectionUsageTests
 {
     [Trait("Collection Usage", "Collection<T>")]
-    public class CollectionTests
+    public class Collection_Tests
     {
         /// <summary>
         /// Collection<T> is an indexed base collection like Array<T> but is not a fixed size.
         /// 
-        /// Collection<T> does have virtual members to customize the collection functionality.
+        /// Collection<T> has virtual members to customize the collection functionality.
         /// ClearItems(),InsertItem(int index, T item),RemoveItem(int index), and SetItem(int index, T item) 
         /// 
         /// Since both Collection<T> and List<T> implements IList<T> the functionality is similar, but doesn't

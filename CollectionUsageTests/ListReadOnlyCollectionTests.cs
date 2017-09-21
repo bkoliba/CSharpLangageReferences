@@ -17,6 +17,7 @@ namespace CollectionUsageTests
         /// <summary>
         /// ReadOnlyCollection is an read-only wrapper for IList<T> collections like Collection<T> and List<T>. Which means
         /// the instance doesn't provide Add, Clear, or remove methods.
+        /// Namespace:System.Collections.ObjectModel
         /// </summary>
 
         [Fact]

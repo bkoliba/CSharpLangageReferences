@@ -7,17 +7,21 @@ using Xunit.Abstractions;
 namespace CollectionUsageTests
 {
     [Trait("Collection Usage", "ObservableCollection<T>")]
-    public class ObservableCollectionTests
+    public class ObservableCollection_Tests
     {
         private ITestOutputHelper _output;
 
-        public ObservableCollectionTests(ITestOutputHelper output)
+        public ObservableCollection_Tests(ITestOutputHelper output)
         {
             _output = output;
         }
 
-        //ObservableCollection<T> derives from Collection<T>, INotifyCollectionChanged, INotifyPropertyChanged
-        //When using this collection to adding or removing items will raise events.
+        /// <summary>
+        /// ObservableCollection<T> derives from Collection<T>, INotifyCollectionChanged, INotifyPropertyChanged
+        /// ObservableCollection<T> will raise CollectionChanged ever when adding or removing items from the collection.
+        /// Namespace:System.Collections.ObjectModel
+        /// </summary>
+
         [Fact]
         public void UsingObservableCollectionsToAddAndRemoveItems_ShouldRaiseEvents()
         {

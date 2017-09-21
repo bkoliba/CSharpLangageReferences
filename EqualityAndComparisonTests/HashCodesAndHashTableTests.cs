@@ -4,7 +4,7 @@ using Xunit;
 
 namespace EqualityAndComparisonTests
 {
-    [Trait("Hash tables and Hash Codes", "")]
+    [Trait("Equality","Hash tables and Hash Codes")]
     public class HashCodesAndHashTableTests
     {
         /// <summary>

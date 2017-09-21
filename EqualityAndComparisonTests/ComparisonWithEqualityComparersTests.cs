@@ -7,7 +7,7 @@ using Xunit.Abstractions;
 namespace EqualityAndComparisonTests
 {
     //Shows how to create an comparer which implements IEquatableComparer<T> and one that derives from EquatableComparable<T>.
-    [Trait("Equality Comparer", "")]
+    [Trait("Comparison", "Equality Comparer")]
     public class ComparisonWithEqualityComparersTests
     {
         private ITestOutputHelper _outputLogger;

@@ -6,13 +6,17 @@ using Xunit.Abstractions;
 namespace CollectionUsageTests
 {
     [Trait("Collection Usage", "Arrays")]
-    public class ArrayTests
+    public class Array_Tests
     {
-        //Array are an Index-based collection with an Rich API, very lightweight, special C# syntax, and are fixed size.
-        //-Elements are stored sequentially in memory (very efficient)
-        //-Array and other collectitions are all reference types
+        /// <summary>
+        /// Arrays are an Index-based collection with an Rich API, very lightweight, special C# syntax, and are fixed size.
+        /// Arrays implements Arrays abstract class which also has implimentation for IList<T>
+        /// -Elements are stored sequentially in memory (very efficient)
+        /// -Array and other collections are all reference types
+        /// </summary>
+
         private ITestOutputHelper _output;
-        public ArrayTests(ITestOutputHelper output)
+        public Array_Tests(ITestOutputHelper output)
         {
             //used to write to the test explorer output
             _output = output;

@@ -7,7 +7,7 @@ using Xunit.Abstractions;
 namespace EqualityAndComparisonTests
 {
     //These tests shows how to do basic implementation of using IComparable<T>, IComparer<T>, and Comparer<T> to do comparisons on an struct Array
-    [Trait("Comparison With Comparers", "")]
+    [Trait("Comparison", "Comparison With Comparers")]
     public class ComparisonWithComparersTests
     {
         //Logger to write output results to visual studio runner output

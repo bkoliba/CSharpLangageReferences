@@ -7,7 +7,7 @@ using Xunit.Abstractions;
 
 namespace EqualityAndComparisonTests
 {
-    [Trait("String Comparers","")]
+    [Trait("Comparison", "String Comparers")]
     public class ComparisonStringComparerTests
     {
         private ITestOutputHelper _outputLogger;

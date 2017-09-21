@@ -7,18 +7,19 @@ using Xunit.Abstractions;
 namespace CollectionUsageTests
 {
     [Trait("Collection Usage", "LinkedList<T>")]
-    public class LinkedListCollectionTests
+    public class LinkedList_Tests
     {
         /// <summary>
         /// LinkedList<T> is a list with fast adding/removing of elements because the collection does not have to copy/move 
         /// elements around in memory for adding and removing.
         /// LinkedList is not an index base collection because it isn't stored in an continuous block of memory, 
-        /// instead it is stored anywhere in memory. This collection is still enumerable because the keeps a reference (link/pointer) to the next and previous node.
-        /// LinkedList<T> items are stored in collection as LinkedListNode<T> items(used to store information about the next and previous nodes)
+        /// instead it is stored anywhere in memory. This collection is still enumerable because it keeps a reference (link/pointer) to the next and previous node.
+        /// LinkedList<T> items are stored in collection of LinkedListNode<T> items(used to store information about the next and previous nodes)
+        /// Namespace:System.Collections.Generic
         /// </summary>
 
         private ITestOutputHelper _output;
-        public LinkedListCollectionTests(ITestOutputHelper output)
+        public LinkedList_Tests(ITestOutputHelper output)
         {
             _output = output;
         }

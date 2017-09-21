@@ -1,13 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Xunit;
+﻿using Xunit;
 
 namespace FormattingTypesTests
 {
-    [Trait("String Formatting Methods","")]
+    [Trait("String Formatting", "String Formatting Methods")]
     public class StringFormattingMethodsTests
     {
+        //Adds padding to string with char
         [Fact]
         void AddingPaddingToString()
         {
